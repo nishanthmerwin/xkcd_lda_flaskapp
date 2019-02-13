@@ -22,7 +22,7 @@ def create_query_vector(data):
     return np.asarray([data[x] for x in order])
 
 def load_comics():
-    with open("../data/annotated_comics.json") as fp:
+    with open("./data/annotated_comics.json") as fp:
         comics = json.load(fp)
     for comic in comics:
         score_map = {}
