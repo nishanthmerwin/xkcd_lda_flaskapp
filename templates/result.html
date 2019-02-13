@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Conditions</title>
+</head>
+<body>
+
+<h2> Query parameters </h2>
+
+<div>
+{% for item in data -%}
+    {{ item.key }}: {{ item.value }}
+    <br>
+{% endfor %}
+</div>
+
+<h2> Results </h2>
+
+<center>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Distance</th>
+        <th>image</th>
+    </tr>
+{% for comic in top5 -%}
+    <tr>
+        <th> {{ comic.safe_title }} </th>
+        <th> {{ comic.score }} </th>
+        <th> <img src="{{ comic.img }}" height=200> </th>
+    </tr>
+{% endfor %}
+</table>
+</center>
+
+
+</body>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</html>
