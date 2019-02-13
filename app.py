@@ -1,8 +1,6 @@
 
 from datetime import datetime
 from flask import Flask, render_template, flash, request
-from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
-from wtforms.fields.html5 import DecimalRangeField
 import json
 from scipy.spatial.distance import cdist
 from scipy.spatial import distance
